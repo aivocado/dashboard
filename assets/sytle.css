@@ -1,0 +1,54 @@
+:root {
+  --sidebar-width: 14vw;
+}
+
+body {
+  font-family: "Pretendard GOV", "Pretendard Variable", "Noto Sans KR", Roboto,
+    sans-serif;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: var(--sidebar-width);
+  padding: 2rem 1rem;
+  background-color: #f8f9fa;
+}
+
+.sidebar-hidden {
+  width: var(--sidebar-width);
+  margin-left: calc(-1 * var(--sidebar-width));
+  transition: margin-left 0.3s;
+}
+
+.sidebar-visible {
+  width: var(--sidebar-width);
+  margin-left: 0;
+  transition: margin-left 0.3s;
+}
+
+.main {
+  width: calc(1 - var(--sidebar-width));
+  margin-left: 4vw;
+  transition: margin-left 0.3s;
+}
+
+.main-expanded {
+  transition: margin-left 0.3s;
+}
+
+.header {
+  margin-top: 0.5rem;
+}

@@ -1,0 +1,8 @@
+.env
+.python-version
+poetry.lock
+
+__pycache__/
+
+data/*
+!data/.gitkeep
